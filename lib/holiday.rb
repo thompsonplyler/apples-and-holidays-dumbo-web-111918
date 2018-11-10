@@ -80,7 +80,7 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   gear_array = []
-  
+
   holiday_hash.each do |season_key, holiday_value|
     if season_key == :winter
       holiday_value.each do |supply|
