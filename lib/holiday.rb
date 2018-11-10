@@ -102,7 +102,15 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
+  holiday_return = nil
 
+  holiday_hash.each do |season_value, holiday_value_a|
+    holiday_value_a.each do |holiday_value_b, gear|
+      if gear.include?("BBQ")
+      holiday_return = holiday_value_b.to_s.split("_").map(&:capitalize).join(" ")
+      end
+    end
+  end
+
+holiday_return
 end
