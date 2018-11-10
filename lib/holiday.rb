@@ -79,6 +79,15 @@ end
 # return the second element in the 4th of July array
 
 def all_winter_holiday_supplies(holiday_hash)
+  gear_array = []
+  
+  holiday_hash.each do |season_key, holiday_value|
+    if season_key == :winter
+      holiday_value.each do |supply|
+        gear_array << supply
+      end
+    end
+  end
   # return an array of allh of the supplies that are used in the winter season
 
 end
