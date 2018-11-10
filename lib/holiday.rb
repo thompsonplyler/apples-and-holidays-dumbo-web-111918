@@ -93,15 +93,13 @@ gear_array.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
+  holiday_hash.each do |season, holiday_a|
+  puts "#{season.capitalize}:"
+    holiday_a.each do |holiday_b, gear|
+    puts "\t #{holiday_b.to_s.split("_").map(&:capitalize).join(" ")}: #{gear.join(" ")}"
+    end
+  end
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
