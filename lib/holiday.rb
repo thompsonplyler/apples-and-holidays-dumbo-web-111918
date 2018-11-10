@@ -83,8 +83,8 @@ def all_winter_holiday_supplies(holiday_hash)
 
   holiday_hash.each do |season_key, holiday_value|
     if season_key == :winter
-      holiday_value.each do |supply|
-        gear_array << supply
+      holiday_value.each do |holiday, gear|
+        gear_array << gear
       end
     end
   end
