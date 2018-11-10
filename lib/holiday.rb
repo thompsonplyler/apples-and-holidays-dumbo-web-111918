@@ -99,7 +99,6 @@ def all_supplies_in_holidays(holiday_hash)
     puts "\t #{holiday_b.to_s.split("_").map(&:capitalize).join(" ")}: #{gear.join(" ")}"
     end
   end
-  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
