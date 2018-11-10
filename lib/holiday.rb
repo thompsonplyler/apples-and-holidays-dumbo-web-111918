@@ -89,7 +89,6 @@ def all_winter_holiday_supplies(holiday_hash)
     end
   end
   # return an array of allh of the supplies that are used in the winter season
-binding.pry
 gear_array.flatten
 end
 
